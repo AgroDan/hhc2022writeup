@@ -77,7 +77,8 @@ Each iframe has source code. The first iframe `pin1` reads:
 
 Note the comment. Is that the answer?
 
-Pin 1 Answer: `@&@&&W&&W&&&&`
+!!! success ""
+    Pin 1 Answer: `@&@&&W&&W&&&&`
 
 Yup!
 
@@ -113,12 +114,13 @@ Source code for lock 2:
 Now...time to create some SVG images. This is apparently how you're supposed to get it to work! SVG will solve everything. Image drawing an image with text alone.
 
 This worked for lock 2:
-```xml
-<svg version="1.1" width="200" height="170" xmlns="http://www.w3.org/2000/svg">
-<rect x="0" y="0" width="100%" height="100%" fill="black" />
-<line x1="1" x2="198" y1="73" y2="153" stroke="white" stroke-width="5" />
-</svg>
-```
+!!! success ""
+    ```xml
+    <svg version="1.1" width="200" height="170" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="100%" height="100%" fill="black" />
+    <line x1="1" x2="198" y1="73" y2="153" stroke="white" stroke-width="5" />
+    </svg>
+    ```
 
 ## Lock 3
 
@@ -162,12 +164,13 @@ Upper Right: x=198, y=22
 
 Now at the very least I can build a connector. Using this as input, I was able to get it to work without a problem:
 
-```xml
-<svg version="1.1" width="200" height="170" xmlns="http://www.w3.org/2000/svg">
-<rect x="0" y="0" width="100%" height="100%" fill="black" />
-<line x1="0" x2="198" y1="94" y2="22" stroke="blue" stroke-width="5" />
-</svg>
-```
+!!! success ""
+    ```xml
+    <svg version="1.1" width="200" height="170" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="100%" height="100%" fill="black" />
+    <line x1="0" x2="198" y1="94" y2="22" stroke="blue" stroke-width="5" />
+    </svg>
+    ```
 
 
 ## Lock 4
@@ -225,23 +228,25 @@ Line 2 (blue):
 
 Which gave me:
 
-```xml
-<svg version="1.1" width="200" height="170" xmlns="http://www.w3.org/2000/svg">
-<rect x="0" y="0" width="100%" height="100%" fill="black" />
-<line x1="0" x2="198" y1="44" y2="44" stroke="white" stroke-width="5" />
-<line x1="0" x2="198" y1="133" y2="133" stroke="blue" stroke-width="5" />
-</svg>
-```
+!!! success ""
+    ```xml
+    <svg version="1.1" width="200" height="170" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="100%" height="100%" fill="black" />
+    <line x1="0" x2="198" y1="44" y2="44" stroke="white" stroke-width="5" />
+    <line x1="0" x2="198" y1="133" y2="133" stroke="blue" stroke-width="5" />
+    </svg>
+    ```
 
-Now, I could go ahead and try to bypass the javascript altogether, but this works too: because I'm exploiting the concept of the replace function stopping me from using more than 1 `<` and `>` as well as `"`"`
+Now, I could go ahead and try to bypass the javascript altogether, but this works too: because I'm exploiting the concept of the replace function stopping me from using more than 1 `<` and `>` as well as `"`
 
-```xml
-<<svg version=""1.1" width="200" height="170" xmlns="http://www.w3.org/2000/svg">>
-<rect x="0" y="0" width="100%" height="100%" fill="black" />
-<line x1="0" x2="198" y1="44" y2="44" stroke="white" stroke-width="5" />
-<line x1="0" x2="198" y1="133" y2="133" stroke="blue" stroke-width="5" />
-</svg>
-```
+!!! success ""
+    ```xml
+    <<svg version=""1.1" width="200" height="170" xmlns="http://www.w3.org/2000/svg">>
+    <rect x="0" y="0" width="100%" height="100%" fill="black" />
+    <line x1="0" x2="198" y1="44" y2="44" stroke="white" stroke-width="5" />
+    <line x1="0" x2="198" y1="133" y2="133" stroke="blue" stroke-width="5" />
+    </svg>
+    ```
 
 If I want to bypass user input, I could just disable it from my browser!
 
@@ -303,22 +308,25 @@ Line 2 (blue)
 
 Gives me:
 
-```xml
-<svg version="1.1" width="200" height="170" xmlns="http://www.w3.org/2000/svg">
-<rect x="0" y="0" width="100%" height="100%" fill="black" />
-<line x1="0" x2="198" y1="135" y2="43" stroke="red" stroke-width="5" />
-<line x1="40" x2="198" y1="168" y2="89" stroke="blue" stroke-width="5" />
-</svg>
-```
+!!! success ""
+    ```xml
+    <svg version="1.1" width="200" height="170" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="100%" height="100%" fill="black" />
+    <line x1="0" x2="198" y1="135" y2="43" stroke="red" stroke-width="5" />
+    <line x1="40" x2="198" y1="168" y2="89" stroke="blue" stroke-width="5" />
+    </svg>
+    ```
 
 THIS WORKS FOR SOME REASON, note the space in front!
-```xml
- <svg version="1.1" width="200" height="170" xmlns="http://www.w3.org/2000/svg">
-<rect x="0" y="0" width="100%" height="100%" fill="black" />
-<line x1="0" x2="198" y1="135" y2="43" stroke="red" stroke-width="5" />
-<line x1="40" x2="198" y1="168" y2="89" stroke="blue" stroke-width="5" />
-</svg>
-```
+
+!!! succedss ""
+    ```xml
+     <svg version="1.1" width="200" height="170" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="100%" height="100%" fill="black" />
+    <line x1="0" x2="198" y1="135" y2="43" stroke="red" stroke-width="5" />
+    <line x1="40" x2="198" y1="168" y2="89" stroke="blue" stroke-width="5" />
+    </svg>
+    ```
 
 
 And all I had to do for pin5 again was to disable the same `sanitizeInput()` function in the source. Super easy, barely an inconvenience.
@@ -372,14 +380,15 @@ Line 3 (blue)
 
 Result:
 
-```xml
-<svg version="1.1" width="200" height="170" xmlns="http://www.w3.org/2000/svg">
-<rect x="0" y="0" width="100%" height="100%" fill="black" />
-<line x1="0" x2="198" y1="34" y2="34" stroke="#00FF00" stroke-width="5" />
-<line x1="0" x2="198" y1="76" y2="109" stroke="red" stroke-width="5" />
-<line x1="0" x2="146" y1="117" y2="168" stroke="blue" stroke-width="5" />
-</svg>
-```
+!!! success ""
+    ```xml
+    <svg version="1.1" width="200" height="170" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="100%" height="100%" fill="black" />
+    <line x1="0" x2="198" y1="34" y2="34" stroke="#00FF00" stroke-width="5" />
+    <line x1="0" x2="198" y1="76" y2="109" stroke="red" stroke-width="5" />
+    <line x1="0" x2="146" y1="117" y2="168" stroke="blue" stroke-width="5" />
+    </svg>
+    ```
 
 NOTE: I had to change the stroke of the first line from green to `#00FF00` because the colors didn't match up. I screenshotted it and did a color match in GIMP to determine the RGB parameters needed. "Green" was too dark to register.
 

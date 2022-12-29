@@ -2,22 +2,14 @@
 
 After getting the Web Ring, we get a visit from Grinchum again!
 
-![Grinchum](/img/fountain/grinchum.png)
+![Grinchum](/img/fountain/grinchum.png){ align=left }
 
-< Note, this is the 4th dialogue, need the 3rd >
+!!! quote "Grinchum"
+	😏 _First lost... second lost... third lost._ 😟
 
-```
-🥺 _Four Preciouses - lost!_
+	_Where are they?_ 😦 _WHERE ARE THEY, preciouses?_
 
-😫 _Noooo... grinchum..grinchum_
+	_No! Aaargh! Lost!_
 
-😐 **..... naggy human doesn't _only_ want coinses and hatses.**
+	😖 **You - naggy human. Musn't bother us. 😱 Not its business!** _grinchum..grinchum_
 
-**...What... 🤨has it got...**
-
-😠 **in its silly, little, badges!?**
-
-😧**Stole them... 😠 You STOLE them!**
-
-😡 **Raaaargh!! We will make sure naggy human never takes our last Precious!**
-```

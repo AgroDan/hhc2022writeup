@@ -1,15 +1,14 @@
 # First Canary
 
-![First Canary](/img/underground/canary1.png)
-
 This canary was found right next to where Grinchum stood originally.
 
-```
-_chirp_
+![First Canary](/img/underground/canary1.png){ align=left }
 
-I tot I taw a Grinchum...
+!!! quote "Canary"
+	_chirp_
 
-I did, I did!
+	I tot I taw a Grinchum...
 
-_chirp chirp_
-```
+	I did, I did!
+
+	_chirp chirp_

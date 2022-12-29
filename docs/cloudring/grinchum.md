@@ -2,28 +2,19 @@
 
 Grinchum is back after obtaining the Cloud Ring.
 
-![Grinchum](/img/cloudring/grinchum.png)
+![Grinchum](/img/cloudring/grinchum.png){ align=left }
 
-< Note, this is the second dialogue >
+!!! quote "Grinchum"
+	🥺 _Four Preciouses - lost!_
 
-```
-😖 _A second Precious is gone! Now we only have three._
+	😫 _Noooo... grinchum..grinchum_
 
-🤨 **Why are you humanses nagging us? We are busy.** _grinchum..grinchum_
+	😐 **..... naggy human doesn't _only_ want coinses and hatses.**
 
-**You want to know about us? If we tell the naggy human, will it go away? Fine...**
+	**...What... 🤨has it got...**
 
-🥺 **The jolly human and the elfses locked up the Preciouses, but I freed them all, and together we escaped.**
+	😠 **in its silly, little, badges!?**
 
-**We fled, and we were so alone. We soon forgot the taste of Lembanh, the softness of snowflakes falling, even our name.**
+	😧**Stole them... 😠 You STOLE them!**
 
-**And we only wanted to eat raw fish: nigiri, maki, or shashimi. But we most likes gnawing the whole, living fish, so juicy sweet.**
-
-**Then we saw the Sporcses, and they wanted my Preciouses all to themselves.**
-
-**And the humanses came, but they just want coinses for their silly hats.**
-
-**We only meant to protect you, Preciouses, from the naughty Elfses and Flobbitses and Sporcses, so we locked you away.**
-
-😏 **Now leave us alone, naggy human, we must find the two missing Preciouses.**
-```
+	😡 **Raaaargh!! We will make sure naggy human never takes our last Precious!**

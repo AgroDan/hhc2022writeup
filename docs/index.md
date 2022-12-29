@@ -5,4 +5,4 @@ By Agr0 (9vmxhgqp6@relay.firefox.com)
 
 Lord of the Rings references abound. Here is my writeup!
 
-[Start Here!](start_here/obj1.md)
+[Start Here!](stagingarea/index.md)

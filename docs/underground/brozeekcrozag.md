@@ -1,41 +1,35 @@
 # Brozeek and Crozag
 
-![Brozeek and Crozag, Crypto-Bros](/img/underground/brozeekcrozag.png)
+Brozeek and Crozag were two of the Bro-iest Crypto-Bros around.
 
-Brozeek:
-```
-Cro! Slicmer got me on the BSRS pre-sale!
+![Brozeek and Crozag, Crypto-Bros](/img/underground/brozeekcrozag.png){ align=left }
 
-Now all we gotta do is swap outfits, then you can go back in there as me.
+!!! quote "Brozeek"
+	Cro! Slicmer got me on the BSRS pre-sale!
 
-Tell Slicmer you lost your wallet key, so you made a new wallet and need to add it to the list.
+	Now all we gotta do is swap outfits, then you can go back in there as me.
 
-Then give him your wallet address, and we'll both be able to buy an NFT!
+	Tell Slicmer you lost your wallet key, so you made a new wallet and need to add it to the list.
 
-Social engineering at its finest, Cro.
-```
+	Then give him your wallet address, and we'll both be able to buy an NFT!
 
-Crozag:
-```
-Bro, you usually have good ideas, but this one is really terrible.
+	Social engineering at its finest, Cro.
 
-Manipulating friends with social engineering isn't cool, Bro.
+!!! quote "Crozag"
+	Bro, you usually have good ideas, but this one is really terrible.
 
-Let's do it!
-```
+	Manipulating friends with social engineering isn't cool, Bro.
 
-After finishing the final challenge:
+	Let's do it!
 
-Brozeek:
-```
-Hey, Cro, check out what this human's got. It's a BSRS NFT.
+After finishing the final challenge...spoilers!
 
-I bet it took some master-level social engineering to pull that off.
-```
+??? quote "Brozeek"
+	Hey, Cro, check out what this human's got. It's a BSRS NFT.
 
-Crozag:
-```
-That Chorizo guy, Bro...
+	I bet it took some master-level social engineering to pull that off.
 
-What a snob. It makes sense he wasn't invited to the pre-sale.
-```
+??? quote "Crozag"
+	That Chorizo guy, Bro...
+
+	What a snob. It makes sense he wasn't invited to the pre-sale.

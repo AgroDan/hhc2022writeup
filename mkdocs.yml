@@ -51,14 +51,11 @@ extra:
 
 markdown_extensions:
   - admonition
+  - attr_list
   - pymdownx.betterem
   - pymdownx.details
   - pymdownx.keys
   - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:mermaid2.fence_mermaid
   - pymdownx.highlight:
       use_pygments: true
   - pymdownx.inlinehilite
@@ -69,4 +66,99 @@ nav:
   - Home: 'index.md'
   - About Me: 'about.md'
   - Start Here:
-    - Chapter I: 'start_here/obj1.md'
+    - Staging Area: 'stagingarea/index.md'
+    - Castle Approach: 
+      - Main: 'castleapproach/index.md'
+      - Chimney Scissorsticks: 'castleapproach/chimney.md'
+      - North Pole: 'castleapproach/northpole.md'
+      - Cyberus: 'castleapproach/cyberus.md'
+      - Google: 'castleapproach/google.md'
+      - SANS.edu: 'castleapproach/sans.md'
+      - Shenanigans: 'shenanigans/index.md'
+    - Underground: 
+      - Main: 'underground/index.md'
+      - Characters:
+        - Grinchum: 'underground/grinchum.md'
+        - Morcel Nougat: 'underground/morcel.md'
+        - Tangle Coalbox: 'underground/tangle.md'
+        - Brozeek and Crozag: 'underground/brozeekcrozag.md'
+        - Canaries:
+          - Canary 1: 'underground/canary1.md'
+          - Canary 2: 'underground/canary2.md'
+          - Canary 3: 'underground/canary3.md'
+          - Jason: 'underground/jason.md'
+        - Hidden Chests: 'underground/hiddenchests.md'
+    - Hall of Talks: 'halloftalks/index.md'
+    - Tolkien Ring: 
+      - Main: 'tolkienring/index.md'
+      - Dusty Giftwrap:
+        - Character: 'tolkienring/dusty.md'
+        - Windows Event Logs: 'tolkienring/wineventlogs.md'
+      - Fitzy Shortstack:
+        - Character: 'tolkienring/fitzy.md'
+        - Suricata Regata: 'tolkienring/suricata.md'
+      - Sparkle Redberry:
+        - Character: 'tolkienring/sparkle.md'
+        - Wireshark Phishing: 'tolkienring/wireshark.md'
+      - Snowrog: 'tolkienring/snowrog.md'
+      - Grinchum: 'tolkienring/grinchum.md'
+    - Elfen Ring: 
+      - River: 
+        - Main: 'elfenring/index.md'
+        - Bow NineCandle:
+          - Character: 'elfenring/bow.md'
+          - Clone With a Difference: 'elfenring/clonewithadifference.md'
+      - Elf House: 
+        - Main: 'elfhouse/index.md'
+        - Tinsel Upatree:
+          - Character: 'elfhouse/tinselupatree.md'
+          - Prison Escape: 'elfhouse/prisonescape.md'
+        - Rippin Proudboot:
+          - Character: 'elfhouse/rippinproudboot.md'
+          - Jolly CI/CD: 'elfhouse/jollycicd.md'
+        - Grinchum: 'elfhouse/grinchum.md'
+    - Web Ring:
+      - Main: 'webring/index.md'
+      - Alabaster Snowball: 'webring/alabastersnowball.md'
+      - Hal Tandybuck:
+        - Character: 'webring/haltandybuck.md'
+        - Boria Mine Door: 'webring/boriaminedoor.md'
+      - Glamtariel's Fountain:
+        - Main: 'fountain/index.md'
+        - Glamtariel's Fountain: 'fountain/glamtarielsfountain.md'
+        - Akbowl: 'fountain/akbowl.md'
+        - Grinchum: 'fountain/grinchum.md'
+    - Cloud Ring:
+      - Main: 'cloudring/index.md'
+      - Hidden Chest: 'cloudring/hiddenchest.md'
+      - Gerty Snowburrow: 'cloudring/gertysnowburrow.md'
+      - Jill Underpole:
+        - Character: 'cloudring/jillunderpole.md'
+        - AWS CLI Intro: 'cloudring/awscliintro.md'
+      - Sulfrod:
+        - Character: 'cloudring/sulfrod.md'
+        - AWS CLI Exploitation: 'cloudring/awscliexploitation.md'
+      - Grinchum: 'cloudring/grinchum.md'
+    - Burning Ring of Fire:
+      - Main: 'burning/index.md'
+      - Wombley Cube:
+        - Character: 'burning/wombleycube.md'
+        - Hat Vending Machine: 'burning/hatvendingmachine.md'
+      - Palzari: 'burning/palzari.md'
+      - Chorizo: 'burning/chorizo.md'
+      - Slicmer:
+        - Character: 'burning/slicmer.md'
+        - Blockchain Explorer: 'burning/blockchainexplorer.md'
+      - Luigi:
+        - Character: 'burning/luigi.md'
+        - Bored Sporc Rowing Society: 'burning/bsrs.md'
+      - Grinchum: 'burning/grinchum.md'
+    - Castle:
+      - Main: 'castle/index.md'
+      - Santa: 'castle/santa.md'
+      - Smilegol: 'castle/smilegol.md'
+      - Angel Candysalt: 'castle/angelcandysalt.md'
+      - Eve Snowshoes: 'castle/evesnowshoes.md'
+      - Four Calling Birds: 'castle/fourcallingbirds.md'
+      - Rose Mold: 'castle/rosemold.md'
+      - Timpy Toque: 'castle/timpytoque.md'

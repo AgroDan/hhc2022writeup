@@ -1,25 +1,24 @@
 # Morcel Nougat
 
-![Morcel Nougat](/img/underground/morcelnougat.png)
-
 Morcel was hanging out near the Elfen Ring.
 
-```
-Hello, I'm Morcel Nougat, elf extraordinaire!
+![Morcel Nougat](/img/underground/morcelnougat.png){ align=left }
 
-I was in the first group of elves that started digging into the snow.
+!!! quote "Morcel Nougat"
+	Hello, I'm Morcel Nougat, elf extraordinaire!
 
-Eventually, we burrowed deep enough that we came upon an already existing tunnel network.
+	I was in the first group of elves that started digging into the snow.
 
-As we explored it, we encountered a people that claimed to be the Flobbits.
+	Eventually, we burrowed deep enough that we came upon an already existing tunnel network.
 
-We were all astonished, because we learn a little about the Flobbits in history class, but nobody's ever seen them.
+	As we explored it, we encountered a people that claimed to be the Flobbits.
 
-They were part of the Great Schism hundreds of years ago that split the Munchkins and the Elves.
+	We were all astonished, because we learn a little about the Flobbits in history class, but nobody's ever seen them.
 
-Not much else was known, until we met them in the tunnels! Turns out, their exodus took them to Middle Earth.
+	They were part of the Great Schism hundreds of years ago that split the Munchkins and the Elves.
 
-They only appear when the 5 Rings are in jeopardy. Though, the Rings weren't lost until after we started digging. Hmm...
+	Not much else was known, until we met them in the tunnels! Turns out, their exodus took them to Middle Earth.
 
-Anyways, be careful as you venture down further. I hear something sinister is in the depths of these tunnels.
-```
+	They only appear when the 5 Rings are in jeopardy. Though, the Rings weren't lost until after we started digging. Hmm...
+
+	Anyways, be careful as you venture down further. I hear something sinister is in the depths of these tunnels.

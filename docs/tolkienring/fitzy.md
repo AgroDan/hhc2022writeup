@@ -1,32 +1,32 @@
 # Fitzy Shortstack
 
-![Fitzy Shortstack](/img/tolkienring/fitzyshortstack.png)
-
 Fitzy was right next to the `Suricata Regatta` challenge terminal.
 
-```
-Hm?.. Hello...
+![Fitzy Shortstack](/img/tolkienring/fitzyshortstack.png){ align=left }
 
-Sorry, I don't mean to be uncharaceristically short with you.
+!!! quote "Fitzy Shortstack"
+	Hm?.. Hello...
 
-There's just this abominable Snowrog here, and I'm trying to comprehend Suricata to stop it from getting into the kitchen.
+	Sorry, I don't mean to be uncharaceristically short with you.
 
-I believe that if I can phrase these Suricata incantations correctly, they'll create a spell that will generate warnings.
+	There's just this abominable Snowrog here, and I'm trying to comprehend Suricata to stop it from getting into the kitchen.
 
-And hopefully those warnings will scare off the Snowrog!
+	I believe that if I can phrase these Suricata incantations correctly, they'll create a spell that will generate warnings.
 
-Only... I'm quite baffled. Maybe you can give it a go?
-```
+	And hopefully those warnings will scare off the Snowrog!
 
-After completing the Suricata Regatta challenge:
+	Only... I'm quite baffled. Maybe you can give it a go?
 
-```
-Woo hoo - you wielded Suricata magnificently! Thank you!
 
-Now to shout the final warning of power to the Snowrog...
+After completing the Suricata Regatta challenge (spoilers!):
 
-YOU...SHALL NOT...PASS!!!
-```
+??? quote "Fitzy Shortstack"
+	Woo hoo - you wielded Suricata magnificently! Thank you!
+
+	Now to shout the final warning of power to the Snowrog...
+
+	YOU...SHALL NOT...PASS!!!
+
 
 And now...no more Snowrog!
 

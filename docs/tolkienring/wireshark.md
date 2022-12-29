@@ -4,57 +4,58 @@ This was a set of instructions to answer questions at the terminal.
 
 ![Wireshark Phishing Terminal](/img/tolkienring/wireshark.png)
 
-```
-This all started when I clicked on a link in my email. 
-Can you help me? 
-```
+!!! question
+    This all started when I clicked on a link in my email. 
+    Can you help me? 
 
-Answer: `Yes`
+!!! success ""
+    Answer: `Yes`
 
-```
-There are objects in the PCAP file that can be exported by Wireshark and/or Tshark. What type of objects can be exported from this PCAP?
-```
+!!! question
+    There are objects in the PCAP file that can be exported by Wireshark and/or Tshark. What type of objects can be exported from this PCAP?
 
-Answer `http`
+!!! success ""
+    Answer `http`
 
-```
-What is the file name of the largest file we can export?
-```
+!!! question
+    What is the file name of the largest file we can export?
 
-Answer `app.php`
+!!! success ""
+    Answer `app.php`
 
-```
-What packet number starts that app.php file?
-```
+!!! question
+    What packet number starts that app.php file?
 
-Answer `192.185.57.242`
+!!! success ""
+    Answer `192.185.57.242`
 
-```
-What file is saved to the infected host?
-```
+!!! question
+    What file is saved to the infected host?
 
 After reviewing the PHP code that was saved, I discovered:
 
-Answer: `Ref_Sept24-2020.zip`
+!!! success ""
+    Answer: `Ref_Sept24-2020.zip`
 
-```
-Attackers used bad TLS certificates in this traffic. Which countries were they registered to? Submit the names of the countries in alphabetical order separated by a commas (Ex: Norway, South Korea).
-```
+!!! question
+    Attackers used bad TLS certificates in this traffic. Which countries were they registered to? Submit the names of the countries in alphabetical order separated by a commas (Ex: Norway, South Korea).
 
 This was weird, had to filter on `tls.handshake.type == 11` to obtain all the TLS certs. I opened all the certs and simply chose any that weren't from Redmond WA. In this order, it was:
 
-Answer: `Israel, South Sudan`
+!!! success ""
+    Answer: `Israel, South Sudan`
 
 
-```
-Was the host infected? Yes/No
-```
+!!! question
+    Was the host infected? Yes/No
 
-Answer: `Yes`
+I'll take obvious answers for $200, Alex.
+!!! success ""
+    Answer: `Yes`
 
 Said yes because the php script I reviewed looked realllly fishy...
 
-```php lineenums="1"
+```javascript linenums="1"
 <script>
 
 	let d = -new Date().getTimezoneOffset();

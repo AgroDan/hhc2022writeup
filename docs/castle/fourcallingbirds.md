@@ -2,22 +2,14 @@
 
 ![Four Calling Birds](/img/castle/fourcallingbirds.png)
 
-Yeller:
-```
-GREAT JOB!
-```
+!!! quote "Yeller"
+	GREAT JOB!
 
-Seller:
-```
-I managed to convince the boss to give you the best price EVER!
-```
+!!! quote "Seller"
+	I managed to convince the boss to give you the best price EVER!
 
-Quacker:
-```
-BEEP BEEP!
-```
+!!! quote "Quacker"
+	BEEP BEEP!
 
-Dealer:
-```
-You hit the jackpot!
-```
+!!! quote "Dealer"
+	You hit the jackpot!

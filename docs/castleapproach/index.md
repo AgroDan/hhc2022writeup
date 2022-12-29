@@ -6,34 +6,32 @@ Behold, Kringle Castle!
 
 There were quite a few characters here to interact with. First of all, Santa was here! And next to a KTM terminal as well for our convenience.
 
-![Kringle](/img/castleapproach/santaandktm.png)
+![Kringle](/img/castleapproach/santaandktm.png){ align=left }
 
-Santa had this to say:
+!!! quote "Santa"
+	Welcome to the North Pole, intrepid traveler!
 
-```
-Welcome to the North Pole, intrepid traveler!
+	Wow, we had quite a storm last night!
 
-Wow, we had quite a storm last night!
+	My castle door is sealed shut behind a giant snowbank.
 
-My castle door is sealed shut behind a giant snowbank.
+	The Elves have decided to burrow under the snow to get everything ready for our holiday deliveries.
 
-The Elves have decided to burrow under the snow to get everything ready for our holiday deliveries.
+	But there's another wrinkle: my Five Golden Rings have _gone missing_.
 
-But there's another wrinkle: my Five Golden Rings have _gone missing_.
+	Without the magic of the Rings, we simply can't launch the holiday season.
 
-Without the magic of the Rings, we simply can't launch the holiday season.
+	My reindeer won't fly; I won't be able to zip up and down chimneys.
 
-My reindeer won't fly; I won't be able to zip up and down chimneys.
+	What's worse, without the magic Rings, I can't fit the millions of cookies in my belly!
 
-What's worse, without the magic Rings, I can't fit the millions of cookies in my belly!
+	I challenge you to go on a quest to find and retrieve each of the five Rings.
 
-I challenge you to go on a quest to find and retrieve each of the five Rings.
+	I'll put some initial goals in your badge for you.
 
-I'll put some initial goals in your badge for you.
+	The holidays, and the whole world, are counting on you.
 
-The holidays, and the whole world, are counting on you.
-```
 
-Welp, looks like we have 5 golden rings to find.
+Welp, no pressure or anything, but it looks like we have 5 golden rings to find.
 
-Additionally, other dialogue was mentioned that you can view on other pages.
+Looking around however, it looks like we had a few other interesting characters to view. For starters, there was our good friend [Chimney Scissorsticks](chimney.md)! Not to mention the talking [North Pole](northpole.md).

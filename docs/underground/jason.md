@@ -1,13 +1,12 @@
 # Jason
 
-![Jason](/img/underground/jason.png)
+Jason was found near the entrance to the Burning Ring of Fire. He looked dead, but he assured me he was just resting. Jason makes yet another appearance in the Holiday Hack Challenge. Last year he was a toilet. So...I guess that's an upgrade.
 
-Jason was found near the entrance to the Burning Ring of Fire. He looked dead, but he assured me he was just resting.
+![Jason](/img/underground/jason.png){ align=left }
 
-```
-Hey! It's me, Jason!
+!!! quote "Jason Blanchard"
+	Hey! It's me, Jason!
 
-I'm not dead. I'm merely resting.
+	I'm not dead. I'm merely resting.
 
-Look at my beautiful yellow plumage!
-```
+	Look at my beautiful yellow plumage!

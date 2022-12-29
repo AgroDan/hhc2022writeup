@@ -107,6 +107,7 @@ echo change > /sys/class/mem/null/uevent
 
 
 Now the output showed:
+
 ![Output](/img/elfhouse/prisonescape1.png)
 
 Nice, showed the hostname of the host OS. I have code execution!

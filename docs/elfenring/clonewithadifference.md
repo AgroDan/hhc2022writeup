@@ -1,16 +1,16 @@
 # Clone with a Difference
 
-Some git foo
+This challenge focused on obtaining a git repository through an alternate means. Specifically changing from SSH to HTTPS.
 
-```
-We just need you to clone one repo: git clone git@haugfactory.com:asnowball/aws_scripts.git 
-This should be easy, right?
+!!! note
+	We just need you to clone one repo: git clone git@haugfactory.com:asnowball/aws_scripts.git 
+	This should be easy, right?
 
-Thing is: it doesn't seem to be working for me. This is a public repository though. I'm so confused!
+	Thing is: it doesn't seem to be working for me. This is a public repository though. I'm so confused!
 
-Please clone the repo and cat the README.md file.
-Then runtoanswer and tell us the last word of the README.md file!
-```
+	Please clone the repo and cat the README.md file.
+	Then runtoanswer and tell us the last word of the README.md file!
+
 
 Simple enough?
 
@@ -30,6 +30,7 @@ and the repository exists.
 
 SSH isn't configured properly. Use HTTP instead.
 
-`git clone http://haugfactory.com/asnowball/aws_scripts.git`
+!!! success ""
+	Answer: `git clone http://haugfactory.com/asnowball/aws_scripts.git`
 
-Running a `cat` on the `README.md` file gives me the last word, which is `maintainers`. Note that even though it ends with a period, adding the period to the end would be an incorrect answer.
+Running a `cat` on the `README.md` file gives me the last word, which is `maintainers`. Note that even though it ends with a period, adding the period to the end would be an incorrect answer. Ask me how I know!

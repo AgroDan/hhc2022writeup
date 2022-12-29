@@ -2,8 +2,7 @@
 
 ![Timpy Toque](/img/castle/timpytoque.png)
 
-```
-Thank you for saving Smilegol and protecting the Rings.
+!!! quote "Timpy Toque"
+	Thank you for saving Smilegol and protecting the Rings.
 
-You will always be a friend of the Flobbits.
-```
+	You will always be a friend of the Flobbits.

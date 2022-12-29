@@ -4,26 +4,26 @@ NOTE: I didn't realize I was supposed to add my own suricata ID, or else things 
 
 ![Suricata Regata Terminal](/img/tolkienring/suricataregata.png)
 
-```
-Use your investigative analysis skills and the suspicious.pcap file to help develop Suricata rules for the elves!
+!!! note
+	Use your investigative analysis skills and the suspicious.pcap file to help develop Suricata rules for the elves!
 
-There's a short list of rules started in suricata.rules in your home directory.
+	There's a short list of rules started in suricata.rules in your home directory.
 
-First off, the STINC (Santa's Team of Intelligent Naughty Catchers) has a lead for us.
-They have some Dridex indicators of compromise to check out.
-First, please create a Suricata rule to catch DNS lookups for adv.epostoday.uk.
-Whenever there's a match, the alert message (msg) should read Known bad DNS lookup, possible Dridex infection.
-Add your rule to suricata.rules
+	First off, the STINC (Santa's Team of Intelligent Naughty Catchers) has a lead for us.
+	They have some Dridex indicators of compromise to check out.
+	First, please create a Suricata rule to catch DNS lookups for adv.epostoday.uk.
+	Whenever there's a match, the alert message (msg) should read Known bad DNS lookup, possible Dridex infection.
+	Add your rule to suricata.rules
 
-Once you think you have it right, run ./rule_checker to see how you've done!
-As you get rules correct, rule_checker will ask for more to be added.
+	Once you think you have it right, run ./rule_checker to see how you've done!
+	As you get rules correct, rule_checker will ask for more to be added.
 
-If you want to start fresh, you can exit the terminal and start again or cp suricata.rules.backup suricata.rules
+	If you want to start fresh, you can exit the terminal and start again or cp suricata.rules.backup suricata.rules
 
-Good luck, and thanks for helping save the North Pole!
-```
+	Good luck, and thanks for helping save the North Pole!
 
-Answer: `alert dns any any -> any any (msg:"Known bad DNS lookup, possible Dridex infection"; dns.query; content:"adv.epostoday.uk"; nocase; sid:2022121101;)`
+!!! success ""
+	Answer: `alert dns any any -> any any (msg:"Known bad DNS lookup, possible Dridex infection"; dns.query; content:"adv.epostoday.uk"; nocase; sid:2022121101;)`
 
 ```
 elf@0a65e9273829:~$ ./rule_checker 
@@ -38,12 +38,15 @@ Develop a Suricata rule that alerts whenever the infected IP address 192.185.57.
 When there's a match, the message (msg) should read Investigate suspicious connections, possible Dridex infection
 ```
 
-Answer `alert http 192.185.57.242 any <> $HOME_NET any (msg:"Investigate suspicious connections, possible Dridex infection"; sid:2022121102)`
+!!! success ""
+	Answer `alert http 192.185.57.242 any <> $HOME_NET any (msg:"Investigate suspicious connections, possible Dridex infection"; sid:2022121102)`
 
 (Note the fact that I used bi-directional, sessions are not included in suricata, this is packet-analysis only)
 
 Also, for some reason if I remove the `sid:1;` section from the first rule I wrote, it doesn't catch the second rule, but STILL catches the first. WTF
-	Future Dan: this is because I have to give each rule it's own suricata ID or things just don't work.
+
+!!! quote "Future Agr0_Dan"
+	this is because I have to give each rule it's own suricata ID or things just don't work.
 
 ```
 elf@0a65e9273829:~$ ./rule_checker 
@@ -62,9 +65,9 @@ When your rule matches, the message (msg) should read Investigate bad certificat
 For the third indicator, we flagged 0 packet(s), but we expected 1. Please try again!
 ```
 
-```
-alert tls any any -> any any (msg:"Investigate bad certificates, possible Dridex infection"; tls.cert_subject; content:"CN=heardbellith.Icanwepeh.nagoya"; nocase; sid:2022121103;)
-```
+!!! success ""
+	Answer: `alert tls any any -> any any (msg:"Investigate bad certificates, possible Dridex infection"; tls.cert_subject; content:"CN=heardbellith.Icanwepeh.nagoya"; nocase; sid:2022121103;)`
+
 
 ```
 elf@c058db4bcade:~$ ./rule_checker 
@@ -84,6 +87,7 @@ Oh, and that string might be GZip compressed - I hope that's OK!
 Just in case they try this again, please alert on that HTTP data with message Suspicious JavaScript function, possible Dridex infection
 ```
 
-Answer: `alert http any any <> any any (msg:"Suspicious JavaScript function, possible Dridex infection"; file_data; content:"let byteCharacters = atob"; sid:2022121104;)`
+!!! success ""
+	Answer: `alert http any any <> any any (msg:"Suspicious JavaScript function, possible Dridex infection"; file_data; content:"let byteCharacters = atob"; sid:2022121104;)`
 
 End result: Christmas will be saved yet again

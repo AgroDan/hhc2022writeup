@@ -1,33 +1,34 @@
 # Akbowl
 
-![Akbowl](/img/fountain/akbowl.png)
-
 Akbowl was a Sporc.
 
-```
-Huh - what? Why do you disturb Akbowl?
+![Akbowl](/img/fountain/akbowl.png){ align=left }
 
-I'm trying to get the ring in here for the Sporc Chief.
+!!! quote "Akbowl"
+	Huh - what? Why do you disturb Akbowl?
 
-Unlucky for me it's lost in this water basin thing.
+	I'm trying to get the ring in here for the Sporc Chief.
 
-You will _not_ get it out before Akbowl!
-```
+	Unlucky for me it's lost in this water basin thing.
+
+	You will _not_ get it out before Akbowl!
 
 Spoiler alert: you will get it out before Akbowl.
 
-```
-No! That's not yours!
+After solving Glamtariel's Fountain:
 
-This birdbath showed me images of this happening.
+??? quote "Akbowl"
+	No! That's not yours!
 
-But I didn't believe it because nobody is better than Akbowl!
+	This birdbath showed me images of this happening.
 
-Akbowl's head is the hardest! That's what the other sporcs tell me.
+	But I didn't believe it because nobody is better than Akbowl!
 
-I guess Akbowl's head is not the smartest.
-```
+	Akbowl's head is the hardest! That's what the other sporcs tell me.
 
-Also, you can stand on the fountain somehow.
+	I guess Akbowl's head is not the smartest.
+
+
+Also, you can stand on the fountain if you'd like.
 
 ![Whaaa?](/img/fountain/levitate.png)
