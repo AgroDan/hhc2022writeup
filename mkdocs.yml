@@ -4,12 +4,12 @@ site_author: Dan Fedele
 site_description: "Agr0 Dan's Holiday Hack Challenge Writeup for 2022!"
 repo_url: "https://github.com/AgroDan/hhc2022writeup"
 copyright: Copyright &copy; 2022-2023 Dan Fedele
-# ᴴₒᴴₒᴴₒ: true
+
 
 theme:
   name: material
-  # logo: img/santa.png
-  # favicon: img/favicon.ico
+  logo: img/onering.png
+  favicon: img/favicon.ico
   features:
     - navigation.tabs
     - navigation.tabs.sticky
@@ -19,16 +19,16 @@ theme:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       toggle:
-        icon: material/toggle-switch
-        name: Switch to Dark Mode
-      primary: amber
+        icon: material/eye
+        name: Switch to Light Mode
+      primary: light blue
       accent: amber
     - media: "(prefers-color-scheme: light)"
       scheme: default
       toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to Light Mode
-      primary: blue
+        icon: material/eye-outline
+        name: Switch to Dark Mode
+      primary: blue grey
       accent: blue
 
 plugins:
@@ -65,7 +65,8 @@ markdown_extensions:
 nav:
   - Home: 'index.md'
   - About Me: 'about.md'
-  - Start Here:
+  - The Challenges: 'challenges.md'
+  - The Journey:
     - Staging Area: 'stagingarea/index.md'
     - Castle Approach: 
       - Main: 'castleapproach/index.md'
@@ -74,6 +75,8 @@ nav:
       - Cyberus: 'castleapproach/cyberus.md'
       - Google: 'castleapproach/google.md'
       - SANS.edu: 'castleapproach/sans.md'
+      - NetWars: 'castleapproach/netwars.md'
+      - Garland Candlesticks: 'castleapproach/garlandcandlesticks.md'
       - Shenanigans: 'shenanigans/index.md'
     - Underground: 
       - Main: 'underground/index.md'
@@ -91,15 +94,15 @@ nav:
     - Hall of Talks: 'halloftalks/index.md'
     - Tolkien Ring: 
       - Main: 'tolkienring/index.md'
+      - Sparkle Redberry:
+        - Character: 'tolkienring/sparkle.md'
+        - Wireshark Phishing: 'tolkienring/wireshark.md'
       - Dusty Giftwrap:
         - Character: 'tolkienring/dusty.md'
         - Windows Event Logs: 'tolkienring/wineventlogs.md'
       - Fitzy Shortstack:
         - Character: 'tolkienring/fitzy.md'
         - Suricata Regata: 'tolkienring/suricata.md'
-      - Sparkle Redberry:
-        - Character: 'tolkienring/sparkle.md'
-        - Wireshark Phishing: 'tolkienring/wireshark.md'
       - Snowrog: 'tolkienring/snowrog.md'
       - Grinchum: 'tolkienring/grinchum.md'
     - Elfen Ring: 
@@ -148,7 +151,7 @@ nav:
       - Chorizo: 'burning/chorizo.md'
       - Slicmer:
         - Character: 'burning/slicmer.md'
-        - Blockchain Explorer: 'burning/blockchainexplorer.md'
+        - Blockchain Divination: 'burning/blockchaindivination.md'
       - Luigi:
         - Character: 'burning/luigi.md'
         - Bored Sporc Rowing Society: 'burning/bsrs.md'
@@ -162,3 +165,4 @@ nav:
       - Four Calling Birds: 'castle/fourcallingbirds.md'
       - Rose Mold: 'castle/rosemold.md'
       - Timpy Toque: 'castle/timpytoque.md'
+  - The Story: 'story.md'

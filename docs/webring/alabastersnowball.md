@@ -26,9 +26,12 @@ uh...oddly enough, apparently I could levitate next to Alibaster? I'll chalk thi
 
 ![I can levitate](/img/webring/levitate.png)
 
-After reviewing the PCAP, I found the bad actor. Looking through HTTP traffic I found someone attempting to send malicious XML:
+After reviewing the PCAP, I found the bad actor. Looking through HTTP traffic I found someone attempting to send malicious XML, as evidenced by the tell-tale XXE attack with the `SYSTEM` attribute in the payload:
 
 ![The Bad Actor](/img/webring/badactor.png)
+
+!!! success "Answer to 'Naughty IP' Question"
+	`18.222.86.32`
 
 After finding it, Alabaster had this to say:
 
@@ -40,6 +43,9 @@ After finding it, Alabaster had this to say:
 
 I searched for `HTTP` packets, then did a "Find" for POST methods, since that is most likely the method of the first login. Sure enough, the first login was to login.html, and the username was `alice`
 
+!!! success "Answer to 'Credential Mining' Question"
+	`alice`
+
 After that, Alabaster had this to add:
 
 !!! quote "Alabaster Snowball"
@@ -48,6 +54,9 @@ After that, Alabaster had this to add:
 	The misses will have HTTP status code `404` and, in this case, the successful guesses return `200`.
 
 For this next question, I had to find the next successful discover from a content discovery tool, and to do this I looked for a slew of `404 FIle Not Found` errors, then looked for the next `200 OK` using a simple search. The first successful directory from the IP of `18.222.86.32` was `/proc`
+
+!!! success "Answer to '404 FTW' Question"
+	`/proc`
 
 Alabaster had one more challenge:
 
@@ -61,8 +70,8 @@ Using the Statistics tab, I did a Protocol Hierarchy search and found XML. When 
 
 ![XXE](/img/webring/xxe.png)
 
-!!! success ""
-	The answer is `http://169.254.169.254/latest/meta-data/identity-credentials/ec2/security-credentials/ec2-instance`
+!!! success "Answer to 'IMDS, XXE, and Other Abbreviations' Question"
+	`http://169.254.169.254/latest/meta-data/identity-credentials/ec2/security-credentials/ec2-instance`
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

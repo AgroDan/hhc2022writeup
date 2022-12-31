@@ -1,4 +1,4 @@
-# Chapter I
+# The Staging Area
 
 ## Objective 1: Orientation
 

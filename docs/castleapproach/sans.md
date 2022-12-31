@@ -8,5 +8,3 @@
 	We have programs for bachelor's degrees, undergraduate certificates, master's degrees, and graduate certificates.
 
 	Visit [our website](https://www.sans.edu/) to learn all about the college!
-
-You can also visit the [Google Booth](google.md), the sans swag booth FIXME, or [Cyberus](cyberus.md) the SANS.edu mascot.

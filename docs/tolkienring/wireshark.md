@@ -4,32 +4,38 @@ This was a set of instructions to answer questions at the terminal.
 
 ![Wireshark Phishing Terminal](/img/tolkienring/wireshark.png)
 
-!!! question
+!!! question ""
     This all started when I clicked on a link in my email. 
     Can you help me? 
 
 !!! success ""
     Answer: `Yes`
 
-!!! question
+!!! question "Question 1"
     There are objects in the PCAP file that can be exported by Wireshark and/or Tshark. What type of objects can be exported from this PCAP?
 
 !!! success ""
     Answer `http`
 
-!!! question
+!!! question "Question 2"
     What is the file name of the largest file we can export?
 
 !!! success ""
     Answer `app.php`
 
-!!! question
+!!! question "Question 3"
     What packet number starts that app.php file?
+
+!!! success ""
+    Answer `687`
+
+!!! question "Question 4"
+    What is the IP of the Apache server?
 
 !!! success ""
     Answer `192.185.57.242`
 
-!!! question
+!!! question "Question 5"
     What file is saved to the infected host?
 
 After reviewing the PHP code that was saved, I discovered:
@@ -37,7 +43,7 @@ After reviewing the PHP code that was saved, I discovered:
 !!! success ""
     Answer: `Ref_Sept24-2020.zip`
 
-!!! question
+!!! question "Question 6"
     Attackers used bad TLS certificates in this traffic. Which countries were they registered to? Submit the names of the countries in alphabetical order separated by a commas (Ex: Norway, South Korea).
 
 This was weird, had to filter on `tls.handshake.type == 11` to obtain all the TLS certs. I opened all the certs and simply chose any that weren't from Redmond WA. In this order, it was:
@@ -46,7 +52,7 @@ This was weird, had to filter on `tls.handshake.type == 11` to obtain all the TL
     Answer: `Israel, South Sudan`
 
 
-!!! question
+!!! question "Question 7"
     Was the host infected? Yes/No
 
 I'll take obvious answers for $200, Alex.

@@ -33,5 +33,3 @@ There were quite a few characters here to interact with. First of all, Santa was
 
 
 Welp, no pressure or anything, but it looks like we have 5 golden rings to find.
-
-Looking around however, it looks like we had a few other interesting characters to view. For starters, there was our good friend [Chimney Scissorsticks](chimney.md)! Not to mention the talking [North Pole](northpole.md).

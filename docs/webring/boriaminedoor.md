@@ -46,6 +46,8 @@ Source of this shows that each box here is an iframe:
 </html>
 ```
 
+For this one, I'll have to go lock by lock.
+
 ## Lock 1
 
 Each iframe has source code. The first iframe `pin1` reads:
@@ -159,8 +161,10 @@ Looking at the image for Lock 3, I got the coordinates for the 2 blue connectors
 
 This allowed me to find the X,Y coordinates, which are:
 
+```
 Lower Left: x=0, y=94
 Upper Right: x=198, y=22
+```
 
 Now at the very least I can build a connector. Using this as input, I was able to get it to work without a problem:
 
@@ -172,6 +176,7 @@ Now at the very least I can build a connector. Using this as input, I was able t
     </svg>
     ```
 
+It was at this point where the Mine Door was opened. But I couldn't stop there...
 
 ## Lock 4
 
@@ -218,6 +223,7 @@ But first, let's get the numbers necessary...
 
 We will need two coords.
 
+```
 Line 1 (white):
 	x=0, y=44
 	x=198, y=44
@@ -225,6 +231,7 @@ Line 1 (white):
 Line 2 (blue):
 	x=0, y=133
 	x=198, y=133
+```
 
 Which gave me:
 
@@ -237,7 +244,9 @@ Which gave me:
     </svg>
     ```
 
-Now, I could go ahead and try to bypass the javascript altogether, but this works too: because I'm exploiting the concept of the replace function stopping me from using more than 1 `<` and `>` as well as `"`
+HOWEVER, COMMA...
+
+Now, I could go ahead and try to bypass the javascript altogether by opening up the Dev Tools in my browser and simply disable the `#!javascript sanitizeInput()` function from even executing, but this works too: because I'm exploiting the concept of the replace function stopping me from using more than 1 `<` and `>` as well as `"`, I'll simply just add two of each first instance of those tags. It will match the first and never match again.
 
 !!! success ""
     ```xml
@@ -248,7 +257,8 @@ Now, I could go ahead and try to bypass the javascript altogether, but this work
     </svg>
     ```
 
-If I want to bypass user input, I could just disable it from my browser!
+
+Of course, that's the _right_ way to do it I suppose. But we're dealing with client side code after all, so might as well explain how to just turn it off!
 
 ![Disable Input](/img/webring/boria4.png)
 
@@ -298,6 +308,7 @@ This has a global search and replace. Yet for some reason, a prepended space byp
 
 First let's get the coords of 5:
 
+```
 Line 1 (red):
 	x=0, y=135
 	x=198, y=43
@@ -305,8 +316,9 @@ Line 1 (red):
 Line 2 (blue)
 	x=40, y=168
 	x=198, y=89
+```
 
-Gives me:
+The resulting coords gives me the un-modified SVG. This won't work as the "less than" brackets get escaped, presumably from a combination of clientside and serverside modification.
 
 !!! success ""
     ```xml
@@ -317,9 +329,9 @@ Gives me:
     </svg>
     ```
 
-THIS WORKS FOR SOME REASON, note the space in front!
+However, playing with random character modification, it seems the only thing that seemed to work was simply pre-pending a space to the whole thing. Not sure why, but that worked fine.
 
-!!! succedss ""
+!!! success ""
     ```xml
      <svg version="1.1" width="200" height="170" xmlns="http://www.w3.org/2000/svg">
     <rect x="0" y="0" width="100%" height="100%" fill="black" />
@@ -328,8 +340,7 @@ THIS WORKS FOR SOME REASON, note the space in front!
     </svg>
     ```
 
-
-And all I had to do for pin5 again was to disable the same `sanitizeInput()` function in the source. Super easy, barely an inconvenience.
+And of course, if that didn't work, I can always do the same thing I did for Lock 4 by disabling the same `#!javascript sanitizeInput()` function in the source. Super easy, barely an inconvenience.
 
 ## Lock 6
 
@@ -360,12 +371,13 @@ Source for lock 6:
 </html>
 ```
 
-Pin 6 looks to do some sort of input sanitization on the backend I guess? I couldn't use `<script> document.write("blah");</script>` as something removed it, and there was no client side code for that. So could I just insert a random SVG?
+Pin 6 looks to do some sort of input sanitization on the backend I guess? I couldn't use `#!html <script> document.write("blah");</script>` as something removed it, and there was no client side code for that. So could I just insert a random SVG?
 
 The answer is yes, yes I can.
 
 This one needed 3 lines.
 
+```
 Line 1 (green):
 	x=0, y=34
 	x=198, y=34
@@ -377,6 +389,7 @@ Line 2 (red):
 Line 3 (blue)
 	x=0, y=117
 	x=146, y=168
+```
 
 Result:
 

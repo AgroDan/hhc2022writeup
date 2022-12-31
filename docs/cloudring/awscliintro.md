@@ -1,17 +1,18 @@
 # AWS CLI Intro
 
+This terminal was located right next to [Jill Underpole](jillunderpole.md).
 
 !!! note
     You may not know this, but AWS CLI help messages are very easy to access. First, try typing:
     $ `aws help`
 
 
-Brings up the aws man page.
+This command brings up the aws man page.
 
 
 !!! note
     Great! When you're done, you can quit with q.
-    Next, please configure the default aws cli credentials with the access key AKQAAYRKO7A5Q5XUY2IY, the secret key qzTscgNdcdwIo/soPKPoJn9sBrl5eMQQL19iO5uf and the region us-east-1 .
+    Next, please configure the default aws cli credentials with the access key `AKQAAYRKO7A5Q5XUY2IY`, the secret key `qzTscgNdcdwIo/soPKPoJn9sBrl5eMQQL19iO5uf` and the region `us-east-1`.
     https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config
 
 Using `aws configure` I went through the motions:
@@ -31,7 +32,7 @@ Using `aws configure` I went through the motions:
     or reference:
     https://awscli.amazonaws.com/v2/documentation/api/latest/reference/sts/index.html
 
-For this, I ran:
+This command can be found by perusing the man pages that are displayed after running `aws sts help`. For this, I ran:
 
 !!! success ""
     `#!sh aws sts get-caller-identity`

@@ -135,7 +135,7 @@ Interesting...so it will create a merkle tree full of members and return a proof
 
 First, I'll modify these lines in the code:
 
-```python linenums="139" hl_lines="12 13"
+```python linenums="139" hl_lines="11 12"
 
              if loc % 2 == 0 and loc != len(self.tree[i]) - 1:
                  proof.append(self.tree[i][loc + 1].hex())

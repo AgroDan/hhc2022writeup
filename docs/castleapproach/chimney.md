@@ -20,5 +20,3 @@
 	You should definitely check it out!
 
 Chimney was around for last year's incident involving Jack Frost and his North Pole Casino venture.
-
-Looking around, we saw the usual suspects, such as the [Google Booth](google.md), the [SANS.edu booth](sans.md), the swag booth (NOTE: GET IMAGES), and [Cyberus](cyberus.md), the SANS.edu mascot!
